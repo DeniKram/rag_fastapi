@@ -1,0 +1,129 @@
+{
+ "reviewed_by": "claude",
+ "note": "Не перечисленные section_id считаются ok. ru_ok=false значит, что русский вариант вопроса некачественный.",
+ "exceptions": {
+  "advanced/security/oauth2-scopes.md#more-details-about-securityscopes": {
+   "status": "ambiguous",
+   "reason": "Вопрос общий: про scopes отвечают и другие разделы страницы oauth2-scopes"
+  },
+  "deployment/server-workers.md#intro": {
+   "status": "ambiguous",
+   "reason": "Про несколько ядер/процессов говорят и deployment/concepts (replication), и разделы server-workers"
+  },
+  "tutorial/path-params-numeric-validations.md#import-path": {
+   "status": "ambiguous",
+   "reason": "Заметка про версию 0.95.1 для Annotated дублируется ещё в 3 разделах"
+  },
+  "advanced/response-change-status-code.md#use-case": {
+   "status": "ambiguous",
+   "reason": "То же, что вопрос 25: про 200/201 отвечают оба раздела (response-change-status-code и additional-status-codes)"
+  },
+  "tutorial/frontend.md#intro": {
+   "status": "ambiguous",
+   "reason": "Три вопроса про одну страницу frontend.md (intro, serve-a-frontend, use-it-with-apirouter): подходят все три раздела"
+  },
+  "advanced/additional-status-codes.md#additional-status-codes_1": {
+   "status": "ambiguous",
+   "reason": "То же, что вопрос 15"
+  },
+  "tutorial/stream-json-lines.md#what-is-a-stream": {
+   "status": "ambiguous",
+   "reason": "Про стриминг отвечают ещё stream-data, server-sent-events и другие разделы stream-json-lines"
+  },
+  "tutorial/body-nested-models.md#deeply-nested-models": {
+   "status": "ambiguous",
+   "reason": "Почти то же, что вопрос 23: вложенные списки моделей описаны в соседнем разделе"
+  },
+  "deployment/docker.md#deployment-concepts": {
+   "status": "ambiguous",
+   "reason": "Общий вопрос про контейнеры: подходят deployment/concepts и другие разделы docker.md"
+  },
+  "advanced/response-headers.md#use-a-response-parameter": {
+   "status": "ambiguous",
+   "reason": "Про заголовки ответа отвечают и middleware (вопрос 48), и другие разделы response-headers"
+  },
+  "tutorial/frontend.md#serve-a-frontend": {
+   "status": "ambiguous",
+   "reason": "См. вопрос 21: три раздела одной страницы frontend.md"
+  },
+  "deployment/manually.md#asgi-servers": {
+   "status": "ambiguous",
+   "reason": "Похоже на вопрос 62: варианты запуска/деплоя описаны в нескольких разделах"
+  },
+  "tutorial/dependencies/dependencies-with-yield.md#context-managers": {
+   "status": "ambiguous",
+   "reason": "Закрытие ресурсов в yield-зависимостях объясняют и соседние разделы (try/finally, база данных)"
+  },
+  "tutorial/middleware.md#create-a-middleware": {
+   "status": "ambiguous",
+   "reason": "Кастомный заголовок в ответе показан и в middleware, и в response-headers (вопрос 35)"
+  },
+  "python-types.md#type-hints-in-fastapi": {
+   "status": "ambiguous",
+   "reason": "Валидацию данных описывают десятки разделов; этот лишь перечисляет возможности"
+  },
+  "tutorial/dependencies/dependencies-with-yield.md#a-dependency-with-yield-and-try": {
+   "status": "ambiguous",
+   "reason": "Закрытие сессии БД при ошибке: подходят и другие разделы dependencies-with-yield и sql-databases"
+  },
+  "deployment/manually.md#use-the-fastapi-run-command": {
+   "status": "ambiguous",
+   "reason": "Вопрос расплывчатый («specific command line tool»): о запуске приложения говорят многие разделы"
+  },
+  "advanced/advanced-dependencies.md#create-an-instance": {
+   "status": "ambiguous",
+   "reason": "Шаг «создать экземпляр» из серии разделов parameterized dependencies; подходит и вводный раздел (вопрос 16)"
+  },
+  "how-to/configure-swagger-ui.md#intro": {
+   "status": "bad",
+   "reason": "Почти дословная копия заголовка (overlap 1.0); подходят и соседние разделы configure-swagger-ui"
+  },
+  "advanced/security/oauth2-scopes.md#intro": {
+   "status": "bad",
+   "reason": "Вопрос «как реализовать»: вступление объясняет идею, а реализация описана в следующих разделах"
+  },
+  "python-types.md#more-motivation": {
+   "status": "bad",
+   "reason": "Вопрос зависит от контекста («in this function»): отдельно от кода непонятен"
+  },
+  "tutorial/dependencies/classes-as-dependencies.md#use-it": {
+   "status": "bad",
+   "reason": "Вопрос слишком расплывчатый и не соответствует разделу (там про класс как зависимость)"
+  },
+  "advanced/openapi-callbacks.md#intro": {
+   "status": "bad",
+   "reason": "Дубль вопроса 30: ответ находится в разделе documenting-the-callback, а не во вступлении",
+   "ru_ok": false
+  },
+  "tutorial/frontend.md#use-it-with-apirouter": {
+   "status": "bad",
+   "reason": "В разделе нет ничего про Create React App, он только про APIRouter и префикс",
+   "ru_ok": false
+  },
+  "how-to/conditional-openapi.md#conditional-openapi-from-settings-and-env-vars": {
+   "status": "bad",
+   "reason": "Раздел про отключение OpenAPI через настройки, а не про изменение расположения (это metadata.md#openapi-url); русский вариант содержит китайские иероглифы",
+   "ru_ok": false
+  },
+  "advanced/using-request-directly.md#intro": {
+   "status": "ok",
+   "reason": "Вступление не объясняет, как получить Request; ответ в разделе use-the-request-object-directly",
+   "fix_section_id": "advanced/using-request-directly.md#use-the-request-object-directly"
+  },
+  "advanced/advanced-dependencies.md#parameterized-dependencies": {
+   "status": "ok",
+   "reason": "EN-вопрос хороший; русский перевод плохой: «перезапускаемая функция» вместо «параметризуемая/переиспользуемая»",
+   "ru_ok": false
+  },
+  "tutorial/dependencies/sub-dependencies.md#using-the-same-dependency-multiple-times": {
+   "status": "ok",
+   "reason": "EN-вопрос хороший; русский перевод плохой: «под-зависимый» вместо «под-зависимость»",
+   "ru_ok": false
+  },
+  "tutorial/dependencies/dependencies-with-yield.md#dependencies-with-yield-and-except": {
+   "status": "ok",
+   "reason": "EN-вопрос хороший; русский перевод плохой: смысл перевода искажён: «не перехватываю исключение, пойманное»",
+   "ru_ok": false
+  }
+ }
+}
