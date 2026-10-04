@@ -161,6 +161,3 @@ This demonstrates that the system can find the correct documentation sections fo
 - add automated smoke tests
 - extend evaluation coverage and benchmark reporting
 
-## License
-
-This project is provided as-is for educational and portfolio purposes.
